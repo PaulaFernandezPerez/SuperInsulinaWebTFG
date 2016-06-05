@@ -1,0 +1,76 @@
+{
+  "identity": "insulina",
+  "connection": "mongo",
+  "defaultTemplate": "default",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+    "ingesta": {
+      "type": "integer"
+    },
+    "fechaHora": {
+      "type": "integer"
+    },
+    "momento": {
+      "type": "integer"
+    },
+    "valor": {
+      "type": "float"
+    },
+    "tipo": {
+      "type": "integer"
+    },
+    "modificado": {
+      "type": "boolean"
+    },
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "insulinas"
+    },
+    "lang": {
+      "type": "string",
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "required": true
+    },
+    "id_ref": {
+      "type": "int"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true,
+  "migrate": "alter",
+  "templates": {
+    "default": {
+      "attributes": {
+        "ingesta": {
+          "type": "string"
+        },
+        "fechaHora": {
+          "type": "integer"
+        },
+        "momento": {
+          "type": "integer"
+        },
+        "valor": {
+          "type": "float"
+        },
+        "tipo": {
+          "type": "integer"
+        },
+        "modificado": {
+          "type": "integer"
+        }
+      },
+      "displayedAttribute": "id"
+    }
+  }
+}

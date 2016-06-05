@@ -1,0 +1,45 @@
+{
+  "identity": "ejercicio",
+  "connection": "mongo",
+  "defaultTemplate": "default",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+    "fechaHora": {
+      "type": "integer"
+    },
+    "tipo": {
+      "type": "integer"
+    },
+    "sensacion": {
+      "type": "integer"
+    },
+    "modificado": {
+      "type": "boolean"
+    },
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "ejercicios"
+    },
+    "lang": {
+      "type": "string",
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "required": true
+    },
+    "id_ref": {
+      "type": "int"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true,
+  "migrate": "alter"
+}

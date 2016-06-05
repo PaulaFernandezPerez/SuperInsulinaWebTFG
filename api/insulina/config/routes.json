@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /insulina": {
+      "controller": "Insulina",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /insulina/:id": {
+      "controller": "Insulina",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /insulina": {
+      "controller": "Insulina",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /insulina/:id": {
+      "controller": "Insulina",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /insulina/:id": {
+      "controller": "Insulina",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /insulina/:parentId/:relation": {
+      "controller": "Insulina",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /insulina/:parentId/:relation/:id": {
+      "controller": "Insulina",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

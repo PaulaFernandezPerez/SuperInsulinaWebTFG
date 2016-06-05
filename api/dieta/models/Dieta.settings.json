@@ -1,0 +1,62 @@
+{
+  "identity": "dieta",
+  "connection": "mongo",
+  "defaultTemplate": "default",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+    "fechaHora": {
+      "type": "integer"
+    },
+    "ingesta": {
+      "type": "integer"
+    },
+    "modificado": {
+      "type": "boolean"
+    },
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "dietas"
+    },
+    "contenido": {
+      "collection": "comidaracion",
+      "via": "dieta"
+    },
+    "lang": {
+      "type": "string",
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "required": true
+    },
+    "id_ref": {
+      "type": "int"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true,
+  "migrate": "alter",
+  "templates": {
+    "default": {
+      "attributes": {
+        "fechaHora": {
+          "type": "integer"
+        },
+        "ingesta": {
+          "type": "integer"
+        },
+        "modificado": {
+          "type": "integer"
+        }
+      },
+      "displayedAttribute": "id"
+    }
+  }
+}

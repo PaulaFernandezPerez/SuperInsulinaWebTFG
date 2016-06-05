@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /glucemia": {
+      "controller": "Glucemia",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /glucemia/:id": {
+      "controller": "Glucemia",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /glucemia": {
+      "controller": "Glucemia",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /glucemia/:id": {
+      "controller": "Glucemia",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /glucemia/:id": {
+      "controller": "Glucemia",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /glucemia/:parentId/:relation": {
+      "controller": "Glucemia",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /glucemia/:parentId/:relation/:id": {
+      "controller": "Glucemia",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

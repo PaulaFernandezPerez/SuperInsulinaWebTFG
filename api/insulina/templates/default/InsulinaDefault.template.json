@@ -1,0 +1,25 @@
+{
+  "default": {
+    "attributes": {
+      "ingesta": {
+        "required": true
+      },
+      "fechaHora": {
+        "required": true
+      },
+      "momento": {
+        "required": true
+      },
+      "valor": {
+        "required": true
+      },
+      "tipo": {
+        "required": true
+      },
+      "modificado": {
+        "required": true
+      }
+    },
+    "displayedAttribute": "id"
+  }
+}

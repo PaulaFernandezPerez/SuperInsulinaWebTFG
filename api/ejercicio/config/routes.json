@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /ejercicio": {
+      "controller": "Ejercicio",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /ejercicio/:id": {
+      "controller": "Ejercicio",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /ejercicio": {
+      "controller": "Ejercicio",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /ejercicio/:id": {
+      "controller": "Ejercicio",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /ejercicio/:id": {
+      "controller": "Ejercicio",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /ejercicio/:parentId/:relation": {
+      "controller": "Ejercicio",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /ejercicio/:parentId/:relation/:id": {
+      "controller": "Ejercicio",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

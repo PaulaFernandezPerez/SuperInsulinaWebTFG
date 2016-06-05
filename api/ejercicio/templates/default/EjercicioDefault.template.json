@@ -1,0 +1,17 @@
+{
+  "default": {
+    "attributes": {
+      "fechaHora": {
+        "required": true
+      },
+      "tipo": {
+        "required": true
+      },
+      "sensacion": {},
+      "modificado": {
+        "required": true
+      }
+    },
+    "displayedAttribute": "id"
+  }
+}

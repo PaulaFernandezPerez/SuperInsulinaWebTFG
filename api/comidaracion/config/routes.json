@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /comidaracion": {
+      "controller": "Comidaracion",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /comidaracion/:id": {
+      "controller": "Comidaracion",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /comidaracion": {
+      "controller": "Comidaracion",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /comidaracion/:id": {
+      "controller": "Comidaracion",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /comidaracion/:id": {
+      "controller": "Comidaracion",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /comidaracion/:parentId/:relation": {
+      "controller": "Comidaracion",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /comidaracion/:parentId/:relation/:id": {
+      "controller": "Comidaracion",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

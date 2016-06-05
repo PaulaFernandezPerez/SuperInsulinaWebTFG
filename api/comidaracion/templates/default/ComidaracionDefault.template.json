@@ -1,0 +1,13 @@
+{
+  "default": {
+    "attributes": {
+      "alimento": {
+        "required": true
+      },
+      "raciones": {
+        "required": true
+      }
+    },
+    "displayedAttribute": "id"
+  }
+}

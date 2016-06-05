@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /dieta": {
+      "controller": "Dieta",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /dieta/:id": {
+      "controller": "Dieta",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /dieta": {
+      "controller": "Dieta",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /dieta/:id": {
+      "controller": "Dieta",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /dieta/:id": {
+      "controller": "Dieta",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /dieta/:parentId/:relation": {
+      "controller": "Dieta",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /dieta/:parentId/:relation/:id": {
+      "controller": "Dieta",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}
