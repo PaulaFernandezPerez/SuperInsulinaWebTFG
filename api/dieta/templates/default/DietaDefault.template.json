@@ -9,6 +9,9 @@
       },
       "modificado": {
         "required": true
+      },
+      "androidId": {
+        "required": true
       }
     },
     "displayedAttribute": "id"

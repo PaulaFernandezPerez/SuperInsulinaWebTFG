@@ -20,6 +20,9 @@
     "modificado": {
       "type": "boolean"
     },
+    "androidId": {
+      "type": "string"
+    },
     "createdBy": {
       "model": "user"
     },
