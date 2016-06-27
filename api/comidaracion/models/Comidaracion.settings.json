@@ -1,47 +1,47 @@
 {
   "identity": "comidaracion",
-  "connection": "mongo",
+  "connection": "default",
   "defaultTemplate": "default",
   "displayedAttribute": "",
   "schema": true,
   "attributes": {
-    "alimento": {
-      "type": "integer"
-    },
-    "raciones": {
-      "type": "float"
-    },
-    "androidId": {
-      "type": "string"
-    },
-    "dieta": {
-      "type": "integer",
-      "required": true,
-      "model": "dieta"
-    },
-    "createdBy": {
-      "model": "user"
-    },
-    "updatedBy": {
-      "model": "user"
-    },
-    "contributors": {
-      "collection": "user",
-      "via": "comidaracions"
-    },
-    "lang": {
-      "type": "string",
-      "required": true
-    },
-    "template": {
-      "type": "string",
-      "required": true
-    },
-    "id_ref": {
-      "type": "int"
-    }
+  "fechaHora": {
+    "type": "integer"
   },
+  "alimento": {
+    "type": "integer"
+  },
+  "raciones": {
+    "type": "float"
+  },
+  "dieta": {
+    "type": "integer"
+  },
+  "androidId": {
+    "type": "string"
+  },
+  "lang": {
+    "type": "string",
+    "required": true
+  },
+  "template": {
+    "type": "string",
+    "required": true
+  },
+  "id_ref": {
+    "type": "int"
+  },
+  "createdBy": {
+    "model": "user"
+  },
+  "updatedBy": {
+    "model": "user"
+  },
+  "contributors": {
+    "collection": "user",
+    "via": "comidaracions"
+  }
+},
   "autoCreatedAt": true,
-  "autoUpdatedAt": true,
-  "migrate": "alter"
+  "autoUpdatedAt": true
 }

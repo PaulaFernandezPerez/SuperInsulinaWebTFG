@@ -17,20 +17,6 @@
     "androidId": {
       "type": "string"
     },
-    "createdBy": {
-      "model": "user"
-    },
-    "updatedBy": {
-      "model": "user"
-    },
-    "contributors": {
-      "collection": "user",
-      "via": "dietas"
-    },
-    "contenido": {
-      "collection": "comidaracion",
-      "via": "dieta"
-    },
     "lang": {
       "type": "string",
       "required": true
@@ -41,6 +27,16 @@
     },
     "id_ref": {
       "type": "int"
+    },
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "dietas"
     }
   },
   "autoCreatedAt": true,
@@ -56,7 +52,10 @@
           "type": "integer"
         },
         "modificado": {
-          "type": "integer"
+          "type": "boolean"
+        },
+        "androidId": {
+          "type": "string"
         }
       },
       "displayedAttribute": "id"

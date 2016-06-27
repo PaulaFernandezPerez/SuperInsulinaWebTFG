@@ -1,19 +1,12 @@
 {
   "default": {
     "attributes": {
-      "alimento": {
-        "required": true
-      },
-      "raciones": {
-        "required": true
-      },
-      "androidId": {
-        "required": true
-      },
-      "dieta": {
-        "required": true
-      }
+      "fechaHora": {},
+      "alimento": {},
+      "raciones": {},
+      "dieta": {},
+      "androidId": {}
     },
-    "displayedAttribute": "id"
+    "displayedAttribute": "fechahora"
   }
 }
