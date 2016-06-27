@@ -9,6 +9,9 @@
       },
       "androidId": {
         "required": true
+      },
+      "dieta": {
+        "required": true
       }
     },
     "displayedAttribute": "id"
